@@ -22,7 +22,9 @@ The target resolution is `1920 x 1080`, this result in an aspect ratio of `1.777
 
 The aspect ratio boundaries (max and min) that are allowed without a crop, can be defined using the formula:
 
-\[ (\pm \text{{max\_change\_factor}} \times \frac{{\text{{target\_width}}}}{{\text{{target\_height}}}}) + \frac{{\text{{target\_width}}}}{{\text{{target\_height}}}} \]
+```math
+(\pm \&nbsp; \text{{max\_change\_factor}} \times \frac{{\text{{target\_width}}}}{{\text{{target\_height}}}}) + \frac{{\text{{target\_width}}}}{{\text{{target\_height}}}} = \text{{Aspect ratio boundaries}}
+```
 
 Here:
 - \(+\) indicates the upper boundary for aspect ratio.
@@ -83,7 +85,10 @@ Run the PowerShell script `script.ps1` with the following optional arguments:
 ```
 
 ## Shell Script (script.sh)
+
 This Bash script provides similar functionality to the PowerShell script for image processing, tailored for Linux environments.
+
+_The shell script hasn't been tested_
 
 ### Usage
 Run the shell script `script.sh` with the following optional arguments:
