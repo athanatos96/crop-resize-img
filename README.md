@@ -66,22 +66,23 @@ This PowerShell script helps in resizing and cropping images. It provides variou
 
 Run the PowerShell script `script.ps1` with the following optional arguments:
 
-- `-i, --input`: Path to the input folder containing images. (default: "input")
+- `-i`: Path to the input folder containing images. (default: "input")
 
 - `-o, --output`: Path to the output folder. (default: "output")
 
-- `-d, --delete-existing-output`: Delete the existing output folder. (flag, default: false)
+- `-d, --delete_existing_output`: Delete the existing output folder. (flag, default: false)
 
 - `-r, --resolution`: Target resolution in the format 'width,height'. (default: "1920,1080")
 
-- `-f, --max-factor-change`: Maximum allowed change factor for image proportions. (default: 0.1)
+- `-m, --max_factor_change`: Maximum allowed change factor for image proportions. (default: 0.1)
 
 - `-v, --verbose`: Enable verbose mode. (flag, default: false)
 
 **Example:**
 
+<!-- .\run_app.ps1 -i "path/to/input" -o "path/to/output" -d -r "1280,720" -f 0.2 -v -->
 ```powershell
-.\run_app.ps1 -i "path/to/input" -o "path/to/output" -d -r "1280,720" -f 0.2 -v
+.\run_app.ps1 -i "path/to/input" -o "path/to/output" -d $True -r "1280,720" -m 0.2 -v $True
 ```
 
 ## Shell Script (script.sh)
