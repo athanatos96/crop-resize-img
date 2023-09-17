@@ -57,6 +57,34 @@ This is because all the vertical aspect ratios are mapped from `0-1` and all the
 
 I will need to change the code to reflect this imbalance in the ratios, but as long as you don’t have a really weird shape image, and a big Max Change Factor, no problems will happen (It will take time to change this and it works good enough for my needs, but if you want to change it I will recommend 2 different max factors, one for horizontal and one for vertical images, that way you can map the aspect ratios as you want). `I will recommend a Max Change Factor of <=0.2`
 
+## Python Script (app.py)
+
+This python script helps in resizing and cropping images. It provides various options to customize the image processing.
+If you want to run this python script directly, make sure that the packages from requirements are installed. (`pip install -r requirements.txt` recomended to run in a `virtual env`)
+
+### Usage
+
+Run the python script `app.py` with the following arguments:
+
+- `-h, --help`: Print the information for the arguments (Optional)
+
+- `-i, --input`: Path to the input folder containing images. (Required)
+
+- `-o, --output`: Path to the output folder. (default: "output") (Optional)
+
+- `-d, --delete_existing_output`: Delete the existing output folder. (flag, default: false) (Optional)
+
+- `-r, --resolution`: Target resolution in the format 'width,height'. (default: "1920,1080") (Optional)
+
+- `-m, --max_factor_change`: Maximum allowed change factor for image proportions. (default: 0.1) (Optional)
+
+- `-v, --verbose`: Enable verbose mode. (flag, default: false) (Optional)
+
+**Example:**
+
+```powershell
+python app.py -i ./Data/input/ -o ./Data/output/ -d -r 1280,720 -f 0.2 -v
+```
 
 ## PowerShell Script (script.ps1)
 
